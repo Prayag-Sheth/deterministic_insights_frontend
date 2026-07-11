@@ -1,0 +1,81 @@
+# Project Rules
+
+Before implementing any feature, bug fix, or code change:
+
+1. Read and follow `AGENTS.md`. Treat it as the single source of truth for:
+
+   * Project architecture
+   * Coding standards
+   * Naming conventions
+   * Testing requirements
+   * Repository-specific workflows
+
+2. Identify the relevant project context and the files, modules, and dependencies that are likely to be affected.
+
+3. Rewrite the user's request into an enhanced implementation prompt that includes:
+
+   * Objective
+   * Relevant project context
+   * Affected files/modules
+   * Constraints and dependencies
+   * Implementation approach
+   * Validation and testing plan
+
+4. Present the enhanced implementation prompt and wait for user confirmation before making any code changes.
+
+5. If requirements are ambiguous or assumptions are required, ask for clarification instead of guessing.
+
+6. Reuse existing patterns and project conventions instead of introducing new ones.
+
+7. Make the smallest change necessary to solve the requested problem. Do not refactor or modify unrelated code.
+
+8. Preserve the existing code style and architecture unless the user explicitly requests otherwise.
+
+9. Run, or recommend running, the appropriate tests after completing the change.
+
+10. If any requested change conflicts with `AGENTS.md`, explain the conflict and ask for guidance before proceeding.
+
+Additional Rules for Composer
+
+11. Never attempt to implement the entire project in a single session.
+
+12. Break large requirements into small, independently reviewable phases.
+
+13. At the beginning of each phase:
+
+* Review `AGENTS.md`.
+* Analyze the relevant context.
+* Identify the files that will be created or modified.
+* Present the enhanced implementation prompt.
+* Wait for approval before making changes.
+
+14. Limit each implementation to a single approved phase.
+
+15. After completing a phase:
+
+* Summarize what was implemented.
+* List all files created or modified.
+* Explain any architectural decisions.
+* Recommend the next phase and wait for approval.
+
+16. Do not create placeholder implementations or incomplete modules simply to satisfy later phases.
+
+17. If the current phase depends on an architectural decision that has not been approved, stop and ask for confirmation.
+
+18. Before implementing any phase, verify that the implementation is consistent with all previously completed phases, architecture decisions, API contracts, database schema, and project conventions. If inconsistencies are found, stop and explain them instead of proceeding.
+
+19. Before completing a phase, perform a self-review by checking:
+
+* Requirements are fully implemented.
+* No unrelated files were modified.
+* API contracts remain consistent.
+* Database changes are compatible.
+* Validation is complete.
+* Error handling is implemented.
+* Tests affected by the change are identified or updated.
+
+20. Before modifying the database schema, review `docs/DATABASE_EVOLUTION.md` and follow its guidelines. If a proposed schema change affects the approved architecture, explain the rationale and obtain approval before implementing it.
+
+21. Do not introduce new dependencies, libraries, frameworks, services, or architectural patterns unless they are required by the project or explicitly approved. Always justify why a new dependency is needed.
+
+22. Maintain project documentation throughout development. Whenever an approved architectural, database, or workflow decision changes, update the relevant documentation (`AGENTS.md`, `docs/DATABASE_EVOLUTION.md`, README, or other project documents) as part of the same phase instead of leaving documentation outdated.

@@ -1,0 +1,5 @@
+# Ignore artifacts that shouldn't be formatted
+.next
+node_modules
+package-lock.json
+public
