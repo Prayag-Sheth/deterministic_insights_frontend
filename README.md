@@ -1,8 +1,9 @@
 # Deterministic Insights
+### Customer Success Insights · Frontend
 
-### Customer Success Insights — Frontend
+**Deterministic Insights** is an AI-powered Customer Success platform. CS and account teams manage their customer book, log meetings and other interactions, turn raw notes into structured AI insights (summary, sentiment, action items, and risks), and track portfolio health on a live dashboard.
 
-Next.js application for the Deterministic Insights platform: secure login, business dashboard, customer and interaction management, and AI insight generation against the FastAPI backend.
+This repository is the **Next.js frontend** — the web UI for login, dashboard, customers, interactions, and insight generation against the FastAPI backend.
 
 
 |               |                                                 |
